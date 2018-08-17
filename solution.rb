@@ -4,11 +4,11 @@ get '/' do
   @nombre = "desconocido"
   erb :index
 end
-get '/:nombre' do
-  if :nombre.empty?
-    @nombre = "desconocido"
-  else
-    @nombre = params[:nombre].capitalize
-  end
+get '/makers/' do
+  @nombre = "desconocido"
+  erb :index
+end
+get '/makers/:nombre' do
+  @nombre = params[:nombre].capitalize
   erb :index
 end
